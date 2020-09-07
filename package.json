@@ -1,0 +1,86 @@
+{
+  "name": "@ccode/typescript-webpack-plugin",
+  "version": "0.0.1",
+  "description": "一个处理typescript、javascript文件的webpack插件",
+  "main": "lib/index.js",
+  "typings": "types/index.d.ts",
+  "scripts": {
+    "tsc": "rm -rf types && tsc --locale zh-cn",
+    "build": "rollup --config"
+  },
+  "author": {
+    "name": "ccode",
+    "url": "https://github.com/imccode"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/",
+    "types/"
+  ],
+  "keywords": [
+    "@ccode/typescript-webpack-plugin",
+    "typescript-webpack-plugin",
+    "typescript-webpack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imccode/typescript-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imccode/typescript-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/imccode/script-webpack-plugin",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@babel/plugin-proposal-export-namespace-from": "^7.10.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "@babel/runtime-corejs3": "^7.11.2",
+    "babel-loader": "^8.1.0",
+    "cosmiconfig": "^7.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@types/node": "^14.6.4",
+    "@types/update-notifier": "^4.1.1",
+    "@types/webpack": "^4.41.22",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.3.0",
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.(t|j)s": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
