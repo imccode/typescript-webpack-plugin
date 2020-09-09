@@ -1,0 +1,14 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^4.0.0-beta.8"
+  },
+  "scripts": {
+    "dev": "webpack -d -w --hot --progress",
+    "build": "webpack -p --progress"
+  }
+}

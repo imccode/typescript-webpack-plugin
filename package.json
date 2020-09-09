@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
   "scripts": {
-    "tsc": "rm -rf types && tsc --locale zh-cn",
-    "build": "rollup --config"
+    "tsc": "rm -rf types && tsc --locale zh-cn"
   },
   "author": {
     "name": "ccode",

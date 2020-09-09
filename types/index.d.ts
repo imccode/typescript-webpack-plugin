@@ -5,4 +5,6 @@ declare class TypescriptWebpackPlugin {
     constructor(options?: TypescriptWebpackPluginOptions);
     apply(compiler: Compiler): void;
 }
+export * from './types';
+export { TypescriptWebpackPlugin };
 export default TypescriptWebpackPlugin;

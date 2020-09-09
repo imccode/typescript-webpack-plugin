@@ -14,10 +14,12 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "noUnusedLocals": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "lib": ["DOM"],
+    "jsx": "react"
   },
   "paths": {
     "src/*": ["./src/*"]
   },
-  "exclude": ["node_modules", "test", "examples"]
+  "exclude": ["node_modules", "test"]
 }
